@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bookpublishes</h1>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Publisher</th>
+  
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookpublishes.each do |bookpublish| %>
+      <tr>
+        <td><%= bookpublish.book_id %></td>
+        <td><%= bookpublish.publisher_id %></td>
+        <td><%= link_to 'Show', bookpublish %></td>
+        <td><%= link_to 'Edit', edit_bookpublish_path(bookpublish) %></td>
+        <td><%= link_to 'Destroy', bookpublish, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bookpublish', new_bookpublish_path %>

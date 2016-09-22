@@ -1,0 +1,1 @@
+json.array! @bookpublishes, partial: 'bookpublishes/bookpublish', as: :bookpublish

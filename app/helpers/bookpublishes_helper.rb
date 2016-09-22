@@ -1,0 +1,2 @@
+module BookpublishesHelper
+end

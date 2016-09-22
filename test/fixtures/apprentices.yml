@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  apprentice_name: MyString
+  : MyString
+
+two:
+  apprentice_name: MyString
+  : MyString

@@ -1,0 +1,39 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="field">
+  <%= f.label :author_id %>
+  <div class="col-lg-12"%>
+  <%= f.collection_select(:author_id,Author.all,:id,:name,{:prompt=>"Please Select"})%>
+ </div>
+ </div>
+
+ <div class="field">
+    <%= f.label :published_name, "Book Name" %><br>
+    <%= f.text_field :published_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :published_at %><br>
+    <%= f.date_select :published_at %>
+  </div>
+
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
